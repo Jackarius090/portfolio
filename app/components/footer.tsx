@@ -17,11 +17,11 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mb-16 mt-16 border-t border-neutral-200 pt-6">
-      <ul className="mt-4 flex flex-col space-y-2 text-sm text-neutral-600 md:flex-row md:space-x-4 md:space-y-0">
+    <footer className="mb-8 mt-8 border-t border-white/10 pt-4">
+      <ul className="mt-3 flex flex-col space-y-2 text-sm text-stone-400 md:flex-row md:space-x-4 md:space-y-0">
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-950"
+            className="flex items-center transition-all hover:text-stone-100"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/Jackarius090"
