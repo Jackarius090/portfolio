@@ -45,9 +45,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx("bg-neutral-950 text-stone-100")}
+      className={cx("bg-slate-50 text-slate-950")}
     >
-      <body className="mx-3 mt-5 max-w-[72rem] antialiased lg:mx-auto">
+      <body className="mx-4 mt-8 max-w-5xl antialiased lg:mx-auto">
         {children}
         <Footer />
         <Analytics />

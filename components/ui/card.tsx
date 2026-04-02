@@ -9,7 +9,7 @@ function Card({
     <div
       data-slot="card"
       className={cn(
-        "rounded-3xl border border-white/10 bg-white/6 text-stone-100 shadow-[0_28px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm",
+        "rounded-xl border border-slate-200 bg-white text-slate-950 shadow-sm",
         className,
       )}
       {...props}
@@ -37,7 +37,7 @@ function CardTitle({
   return (
     <div
       data-slot="card-title"
-      className={cn("text-base font-semibold tracking-tight", className)}
+      className={cn("text-base font-semibold tracking-tight text-slate-950", className)}
       {...props}
     />
   );
@@ -50,7 +50,7 @@ function CardDescription({
   return (
     <p
       data-slot="card-description"
-      className={cn("text-sm leading-5 text-stone-300", className)}
+      className={cn("text-sm leading-5 text-slate-600", className)}
       {...props}
     />
   );
