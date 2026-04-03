@@ -17,8 +17,8 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mb-8 mt-8 border-t border-slate-200 pt-4">
-      <ul className="mt-3 flex flex-col space-y-2 text-sm text-slate-500 md:flex-row md:space-x-4 md:space-y-0">
+    <footer>
+      <ul className="mt-3 flex flex-col space-y-2 text-s md:flex-row md:space-x-4 md:space-y-0">
         <li>
           <a
             className="flex items-center transition-all hover:text-slate-950"
@@ -27,7 +27,7 @@ export default function Footer() {
             href="https://github.com/Jackarius090"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
+            <p className="ml-2 h-7 hover:text-slate-950">github</p>
           </a>
         </li>
       </ul>

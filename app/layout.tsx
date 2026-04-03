@@ -2,7 +2,6 @@ import "./global.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "./components/footer";
 import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
@@ -11,7 +10,8 @@ export const metadata: Metadata = {
     default: "Jack Dickinson",
     template: "%s | Jack Dickinson",
   },
-  description: "Portfolio site for Jack Dickinson and the projects he has built.",
+  description:
+    "Portfolio site for Jack Dickinson and the projects he has built.",
   openGraph: {
     title: "Jack Dickinson",
     description:
@@ -43,13 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={cx("bg-slate-50 text-slate-950")}
-    >
+    <html lang="en" className={cx("bg-slate-50 text-slate-950")}>
       <body className="mx-4 mt-8 max-w-5xl antialiased lg:mx-auto">
         {children}
-        <Footer />
         <Analytics />
         <SpeedInsights />
       </body>

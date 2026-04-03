@@ -1,9 +1,8 @@
 import Image from "next/image";
+import Footer from "./components/footer";
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
@@ -18,9 +17,25 @@ export default function Page() {
         <p className="text-sm font-medium uppercase tracking-[0.24em] text-slate-500">
           Portfolio
         </p>
-        <h1 className="text-4xl font-semibold tracking-tight text-slate-950">
-          Jack Dickinson
-        </h1>
+        <div className="flex gap-4">
+          <h1 className="text-4xl font-semibold tracking-tight text-slate-950">
+            Jack Dickinson
+          </h1>
+          <a
+            className="flex items-center hover:text-slate-950"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/Jackarius090"
+          >
+            <Image
+              src={"/images/GitHub_Invertocat_Black.svg"}
+              alt="github logo"
+              width={25}
+              height={25}
+            />
+            <p className="ml-2 hover:text-slate-950">github</p>
+          </a>
+        </div>
         <p className="text-base leading-7 text-slate-600">
           Aspiring developer based in Copenhagen. Here are a few projects I have
           built.
@@ -32,9 +47,6 @@ export default function Page() {
           <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
             Projects
           </h2>
-          <p className="mt-1 text-sm text-slate-500">
-            Simple cards with live links and previews.
-          </p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
@@ -46,10 +58,10 @@ export default function Page() {
               rel="noreferrer"
               className="group block"
             >
-              <Card className="h-full overflow-hidden transition duration-200 group-hover:border-slate-300 group-hover:shadow-md">
+              <Card className="h-full transition duration-200 group-hover:border-slate-300 group-hover:shadow-md">
                 <div className="overflow-hidden border-b border-slate-200 bg-slate-100">
                   <Image
-                    className="aspect-[16/10] h-auto w-full object-cover object-top"
+                    className="aspect-16/10 h-auto w-full object-cover object-top rounded-t-xl"
                     src={project.image}
                     alt={project.imageAlt}
                     width={imageDimensions.width}
@@ -61,14 +73,6 @@ export default function Page() {
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="h-px w-full bg-slate-200" />
-                </CardContent>
-                <CardFooter>
-                  <span className="text-sm font-medium text-slate-700 transition group-hover:text-slate-950">
-                    Visit project
-                  </span>
-                </CardFooter>
               </Card>
             </a>
           ))}
