@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Footer from "./components/footer";
 import {
   Card,
   CardDescription,
@@ -14,10 +13,7 @@ export default function Page() {
   return (
     <div className="space-y-8 pb-4">
       <section className="max-w-2xl space-y-3">
-        <p className="text-sm font-medium uppercase tracking-[0.24em] text-slate-500">
-          Portfolio
-        </p>
-        <div className="flex gap-4">
+        <div className="flex gap-20">
           <h1 className="text-4xl font-semibold tracking-tight text-slate-950">
             Jack Dickinson
           </h1>
@@ -35,6 +31,20 @@ export default function Page() {
             />
             <p className="ml-2 hover:text-slate-950">github</p>
           </a>
+          <a
+            className="flex items-center hover:text-slate-950"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/jack-dickinson-b1a44a195/"
+          >
+            <Image
+              src={"/images/linkedin-svg.svg"}
+              alt="github logo"
+              width={25}
+              height={25}
+            />
+            <p className="ml-2 hover:text-slate-950">Linked in</p>
+          </a>
         </div>
         <p className="text-base leading-7 text-slate-600">
           Aspiring developer based in Copenhagen. Here are a few projects I have
@@ -43,13 +53,7 @@ export default function Page() {
       </section>
 
       <section className="space-y-4">
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
-            Projects
-          </h2>
-        </div>
-
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <a
               key={project.href}

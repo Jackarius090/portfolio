@@ -1,10 +1,7 @@
 import * as React from "react";
 import { cn } from "../../lib/utils";
 
-function Card({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
+function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card"
@@ -17,49 +14,40 @@ function Card({
   );
 }
 
-function CardHeader({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
+function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-header"
-      className={cn("flex flex-col gap-1.5 p-4", className)}
+      className={cn("flex flex-row items-center gap-4 p-3", className)}
       {...props}
     />
   );
 }
 
-function CardTitle({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
+function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-title"
-      className={cn("text-base font-semibold tracking-tight text-slate-950", className)}
+      className={cn(
+        "text-base font-semibold tracking-tight text-slate-950",
+        className,
+      )}
       {...props}
     />
   );
 }
 
-function CardDescription({
-  className,
-  ...props
-}: React.ComponentProps<"p">) {
+function CardDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <p
       data-slot="card-description"
-      className={cn("text-sm leading-5 text-slate-600", className)}
+      className={cn("text-sm text-slate-600", className)}
       {...props}
     />
   );
 }
 
-function CardContent({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
+function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-content"
@@ -69,10 +57,7 @@ function CardContent({
   );
 }
 
-function CardFooter({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
+function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-footer"
@@ -82,4 +67,11 @@ function CardFooter({
   );
 }
 
-export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle };
+export {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+};
