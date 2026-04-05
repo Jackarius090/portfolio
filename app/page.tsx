@@ -63,16 +63,14 @@ export default function Page() {
               className="group block"
             >
               <Card className="h-full transition duration-200 group-hover:border-slate-300 group-hover:shadow-md">
-                <div className="overflow-hidden border-b border-slate-200 bg-slate-100">
-                  <Image
-                    className="aspect-16/10 h-auto w-full object-cover object-top rounded-t-xl"
-                    src={project.image}
-                    alt={project.imageAlt}
-                    width={imageDimensions.width}
-                    height={imageDimensions.height}
-                    priority={project === projects[0]}
-                  />
-                </div>
+                <Image
+                  className="aspect-16/10 h-auto w-full object-cover object-top overflow-hidden border rounded-t-xl border-b-slate-200"
+                  src={project.image}
+                  alt={project.imageAlt}
+                  width={imageDimensions.width}
+                  height={imageDimensions.height}
+                  priority={project === projects[0]}
+                />
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>

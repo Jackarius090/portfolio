@@ -22,7 +22,7 @@ export const projects: Project[] = [
     description: "An interactive map game of Taiwan.",
   },
   {
-    title: "Daylength",
+    title: "Daylength visualisation",
     href: "https://daylight-site-rho.vercel.app/",
     image: "/images/daylength-website.png",
     imageAlt: "Daylength website screenshot",
