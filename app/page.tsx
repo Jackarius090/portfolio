@@ -1,13 +1,5 @@
 import Image from "next/image";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../components/ui/card";
-import { projects } from "./projects-data";
-
-const imageDimensions = { width: 1200, height: 900 };
+import ViewContentBox from "@/components/ViewContentBox";
 
 export default function Page() {
   return (
@@ -43,42 +35,15 @@ export default function Page() {
               width={25}
               height={25}
             />
-            <p className="ml-2 hover:text-slate-950">Linked in</p>
+            <p className="ml-2 hover:text-slate-950">LinkedIn</p>
           </a>
         </div>
         <p className="text-base leading-7 text-slate-600">
-          Aspiring developer based in Copenhagen. Here are a few projects I have
-          built.
+          Aspiring developer based in Copenhagen.
         </p>
       </section>
-
-      <section className="space-y-4">
-        <div className="grid gap-8 md:grid-cols-2">
-          {projects.map((project) => (
-            <a
-              key={project.href}
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
-              className="group block"
-            >
-              <Card className="h-full transition duration-200 group-hover:border-slate-300 group-hover:shadow-md">
-                <Image
-                  className="aspect-16/10 h-auto w-full object-cover object-top overflow-hidden border rounded-t-xl border-b-slate-200"
-                  src={project.image}
-                  alt={project.imageAlt}
-                  width={imageDimensions.width}
-                  height={imageDimensions.height}
-                  priority={project === projects[0]}
-                />
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            </a>
-          ))}
-        </div>
+      <section>
+        <ViewContentBox />
       </section>
     </div>
   );

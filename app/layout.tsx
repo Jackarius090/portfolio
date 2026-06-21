@@ -2,21 +2,16 @@ import "./global.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
   title: {
     default: "Jack Dickinson",
     template: "%s | Jack Dickinson",
   },
-  description:
-    "Portfolio site for Jack Dickinson and the projects he has built.",
+  description: "Portfolio site for Jack Dickinson.",
   openGraph: {
     title: "Jack Dickinson",
-    description:
-      "Portfolio site for Jack Dickinson and the projects he has built.",
-    url: baseUrl,
+    description: "Portfolio site for Jack Dickinson.",
     siteName: "Jack Dickinson",
     locale: "en_GB",
     type: "website",
