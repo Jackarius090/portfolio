@@ -11,11 +11,17 @@ export default function ViewContentBox() {
   return (
     <div>
       <div className="flex gap-2">
-        <Button variant={"outline"} onClick={() => setView("projects")}>
+        <Button
+          variant={view === "projects" ? "default" : "outline"}
+          onClick={() => setView("projects")}
+        >
           Projects
         </Button>
 
-        <Button variant={"outline"} onClick={() => setView("courses")}>
+        <Button
+          variant={view === "courses" ? "default" : "outline"}
+          onClick={() => setView("courses")}
+        >
           Courses
         </Button>
       </div>
