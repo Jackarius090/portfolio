@@ -6,7 +6,9 @@ const imageDimensions = { width: 1200, height: 900 };
 
 export default function ProjectCards() {
   return (
-    <main className="space-y-4">
+    <section id="projects" className="space-y-4">
+      <h1 className="font-bold">Projects</h1>
+
       <p>Here are a few projects I have built.</p>
       <div className="grid gap-8 md:grid-cols-2">
         {projects.map((project) => (
@@ -34,6 +36,6 @@ export default function ProjectCards() {
           </a>
         ))}
       </div>
-    </main>
+    </section>
   );
 }
