@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import ProjectCards from "./ProjectCards";
-import CourseCards from "./CourseCards";
+import SkillsAndCourses from "./SkillsAndCourses";
 
 export default function ViewContentBox() {
   return (
@@ -10,13 +10,13 @@ export default function ViewContentBox() {
           <Button variant={"outline"}>Projects</Button>
         </a>
         <a href="#courses">
-          <Button variant={"outline"}>Courses</Button>
+          <Button variant={"outline"}>Skills and Courses</Button>
         </a>
       </div>
 
       <main className="py-4">
         <ProjectCards />
-        <CourseCards />
+        <SkillsAndCourses />
       </main>
     </div>
   );
