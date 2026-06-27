@@ -37,6 +37,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log(`
+           .-------------------------------------.
+      (__) |Hey! Welcome to my portfolio website!|
+\------(oo)/--------------------------------------'
+||    (__)                                
+||w--||
+
+image by Unknown from https://www.asciiart.eu
+    `);
   return (
     <html lang="en" className={cx("bg-slate-50 text-slate-950")}>
       <body className="mx-4 mt-8 max-w-5xl antialiased lg:mx-auto">
